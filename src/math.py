@@ -14,8 +14,6 @@ def factorial(n):
         raise ValueError("factorial is undefined for negative numbers")
 
     result = 1
-    # BUG (planted): range stops at n instead of n + 1, so the final
-    # factor is dropped and this returns (n - 1)! for any n >= 1.
-    for i in range(1, n):
+    for i in range(1, n + 1):
         result *= i
     return result
